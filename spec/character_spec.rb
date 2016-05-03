@@ -8,6 +8,12 @@ describe Character do
     expect(subject.name).to eq(expected_name)
   end
 
+  it "can set its alignment" do
+    expected_alignment = "Good"
+    subject.alignment = expected_alignment 
+    expect(subject.alignment).to eq(expected_alignment)
+  end
+
 end
 
 
