@@ -23,6 +23,10 @@ describe Character do
    expect(subject.alignment).to eq("Good") 
   end
 
+  it "has a default armor class of 10" do
+    expect(subject.armor_class).to eq 10
+  end
+
 end
 
 
