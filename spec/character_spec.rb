@@ -17,7 +17,12 @@ describe Character do
   it "raises ArgumentError when given an invalid alignment" do
     expect{subject.alignment = "Decent"}.to raise_error(ArgumentError)
   end
-    
+   
+  it "accepts lowercase versions of valid alignments" do 
+   subject.alignment = "good"
+   expect(subject.alignment).to eq("Good") 
+  end
+
 end
 
 
