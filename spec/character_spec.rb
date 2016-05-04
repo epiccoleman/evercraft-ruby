@@ -27,6 +27,9 @@ describe Character do
     expect(subject.armor_class).to eq 10
   end
 
+  it "has 5 hp by default" do
+    expect(subject.hp).to eq 5
+  end
 end
 
 

@@ -1,10 +1,12 @@
 class Character
   def initialize
+    @hp = 5
     @armor_class = 10
   end
 
   attr_accessor :name
   attr_reader :armor_class
+  attr_reader :hp
 
   attr_reader :alignment
   def alignment=(alignment) 
