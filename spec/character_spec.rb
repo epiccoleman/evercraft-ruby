@@ -14,6 +14,10 @@ describe Character do
     expect(subject.alignment).to eq(expected_alignment)
   end
 
+  it "raises ArgumentError when given an invalid alignment" do
+    expect{subject.alignment = "Decent"}.to raise_error(ArgumentError)
+  end
+    
 end
 
 
