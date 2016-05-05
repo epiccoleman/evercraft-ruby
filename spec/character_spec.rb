@@ -42,4 +42,8 @@ describe Character do
     expect(subject.hp).to eq expected_hp 
   end 
 
+  it "has a status of 'Alive' by default" do
+    expect(subject.status).to eq "Alive"
+  end
+
 end
