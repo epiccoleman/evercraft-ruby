@@ -31,11 +31,15 @@ describe Character do
     expect(subject.hp).to eq 5
   end
 
+#  it "can be damaged" do 
+#    subject.damage 1
+#    expect(subject.hp).to eq 4 
+#  end 
+
   it "can be damaged" do 
+    expected_hp = subject.hp - 1 
     subject.damage 1
-    expect(subject.hp).to eq 4 
+    expect(subject.hp).to eq expected_hp 
   end 
 
 end
-
-
