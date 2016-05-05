@@ -17,5 +17,9 @@ class Character
     @alignment = alignment.capitalize
   end
 
+  def damage(damage)
+    @hp -= damage
+  end
+
 end
 

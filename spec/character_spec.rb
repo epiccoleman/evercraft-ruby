@@ -20,7 +20,7 @@ describe Character do
    
   it "accepts lowercase versions of valid alignments" do 
    subject.alignment = "good"
-   expect(subject.alignment).to eq("Good") 
+   expect(subject.alignment).to eq "Good" 
   end
 
   it "has a default armor class of 10" do
@@ -30,6 +30,12 @@ describe Character do
   it "has 5 hp by default" do
     expect(subject.hp).to eq 5
   end
+
+  it "can be damaged" do 
+    subject.damage 1
+    expect(subject.hp).to eq 4 
+  end 
+
 end
 
 
