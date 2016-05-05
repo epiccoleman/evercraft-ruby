@@ -7,15 +7,22 @@ class Character
 
   attr_accessor :name
   attr_reader :armor_class
-  attr_reader :status
 
   attr_reader :alignment
-  def alignment=(alignment) 
+  def alignment=(new_alignment) 
     valid_alignments = ['Good', 'Evil', 'Neutral']
-    if not valid_alignments.include? alignment.capitalize
+    if not valid_alignments.include? new_alignment.capitalize
       raise ArgumentError
     end
-    @alignment = alignment.capitalize
+    @alignment = new_alignment.capitalize
+  end
+
+  attr_reader :status
+  def status=(new_status)
+    valid_status = ['Alive', 'Dead']
+    if not valid_status.include? new_status
+      raise ArgumentError 
+    end
   end
 
   attr_reader :hp
@@ -27,9 +34,12 @@ class Character
     end
   end
 
-
   def damage(damage)
     @hp -= damage
+  end
+
+  def alive?
+    @status == "Alive"
   end
 
 end

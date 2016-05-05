@@ -46,6 +46,12 @@ describe Character do
     expect(subject.status).to eq "Alive"
   end
 
+  it "raises ArgumentException for invalid status" do
+    expect{subject.status = "Alive"}.to_not raise_error
+    expect{subject.status = "Dead"}.to_not raise_error
+    expect{subject.status = "Spaced Out"}.to raise_error(ArgumentError)
+  end
+
   describe "when its HP hits zero" do 
     before(:each) do
       subject.hp = 0
@@ -54,7 +60,12 @@ describe Character do
     it "has a status of 'Dead'" do 
       expect(subject.status).to eq 'Dead'
     end
+
+    it "is not alive" do 
+      expect(subject.alive?).to be false
+    end
   end
 
 
 end
+
