@@ -46,4 +46,15 @@ describe Character do
     expect(subject.status).to eq "Alive"
   end
 
+  describe "when its HP hits zero" do 
+    before(:each) do
+      subject.hp = 0
+    end
+
+    it "has a status of 'Dead'" do 
+      expect(subject.status).to eq 'Dead'
+    end
+  end
+
+
 end

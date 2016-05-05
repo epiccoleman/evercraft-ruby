@@ -19,6 +19,14 @@ class Character
   end
 
   attr_reader :hp
+  def hp=(new_hp)
+    @hp = new_hp
+    if @hp <= 0
+      @status = "Dead"
+      @hp = 0
+    end
+  end
+
 
   def damage(damage)
     @hp -= damage
