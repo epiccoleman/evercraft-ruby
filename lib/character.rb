@@ -20,9 +20,10 @@ class Character
   attr_reader :status
   def status=(new_status)
     valid_status = ['Alive', 'Dead']
-    if not valid_status.include? new_status
+    if not valid_status.include? new_status.capitalize
       raise ArgumentError 
     end
+    @status = status.capitalize
   end
 
   attr_reader :hp
