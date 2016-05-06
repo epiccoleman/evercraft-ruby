@@ -86,4 +86,19 @@ describe Character do
       expect(subject.alive?).to be false
     end
   end
+
+  describe "attack" do 
+    it "does 1 damage to enemy when roll beats enemy armor class" do
+      enemy = Character.new
+      success_roll = enemy.armor_class + 1
+      damaged_hp = enemy.hp - 1 
+
+      subject.attack(enemy, success_roll)
+      
+      expect(enemy.hp).to eq damaged_hp 
+    end
+
+  end
+
 end
+

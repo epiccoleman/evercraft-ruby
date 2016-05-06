@@ -39,6 +39,10 @@ class Character
     @hp -= damage
   end
 
+  def attack(receiver, roll)
+    receiver.damage 1
+  end
+
   def alive?
     @status == "Alive"
   end
