@@ -109,8 +109,13 @@ describe Character do
     end
   end
 
-  it "has default strength of 10" do 
+  it "has default ability scores of 10" do 
     expect(subject.strength).to eq 10
+    expect(subject.dexterity).to eq 10
+    expect(subject.constitution).to eq 10
+    expect(subject.wisdom).to eq 10
+    expect(subject.intelligence).to eq 10
+    expect(subject.charisma).to eq 10
   end
 end
 

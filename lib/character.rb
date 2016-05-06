@@ -6,6 +6,11 @@ class Character
 
     @abilities = {}
     @abilities[:strength] = 10
+    @abilities[:dexterity] = 10
+    @abilities[:constitution] = 10
+    @abilities[:wisdom] = 10
+    @abilities[:intelligence] = 10
+    @abilities[:charisma] = 10
   end
 
   attr_accessor :name
@@ -55,6 +60,25 @@ class Character
   def strength
     @abilities[:strength]
   end
+  
+  def dexterity
+    @abilities[:dexterity]
+  end
+  
+  def constitution
+    @abilities[:constitution]
+  end
 
+  def wisdom
+    @abilities[:wisdom]
+  end
+  
+  def intelligence
+    @abilities[:intelligence]
+  end
+
+  def charisma
+    @abilities[:charisma]
+  end
 end
 
