@@ -40,7 +40,9 @@ class Character
   end
 
   def attack(receiver, roll)
-    receiver.damage 1
+    if roll > receiver.armor_class
+      receiver.damage 1
+    end
   end
 
   def alive?

@@ -98,6 +98,15 @@ describe Character do
       expect(enemy.hp).to eq damaged_hp 
     end
 
+    it "does no damage when roll doesn't beat enemy armor class" do 
+      enemy = Character.new 
+      bad_roll = enemy.armor_class - 1 
+      hp_before_attack = enemy.hp
+
+      subject.attack(enemy, bad_roll)
+
+      expect(enemy.hp).to eq hp_before_attack
+    end
   end
 
 end
