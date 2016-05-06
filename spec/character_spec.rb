@@ -109,5 +109,8 @@ describe Character do
     end
   end
 
+  it "has default strength of 10" do 
+    expect(subject.strength).to eq 10
+  end
 end
 

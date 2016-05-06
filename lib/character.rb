@@ -3,6 +3,9 @@ class Character
     @hp = 5
     @armor_class = 10
     @status = "Alive"
+
+    @abilities = {}
+    @abilities[:strength] = 10
   end
 
   attr_accessor :name
@@ -47,6 +50,10 @@ class Character
 
   def alive?
     @status == "Alive"
+  end
+
+  def strength
+    @abilities[:strength]
   end
 
 end
